@@ -6,4 +6,14 @@ whatever user_input = subtract largest values and whatever is left add smaller c
 
 [quarters, dimes, nickels, pennies]
 
+value_hash => {['quarter': 25, 'dime':10, 'nickel':5, 'penny':1]}
 
+value_hash.each { }
+    loop 
+      if purse >= value_hash
+        purse - value_hash
+        #{key}_count += 1
+value_hash.each
+       if (#{key}_count > 0)
+      result.concat("#{{key}_count} #{key}(s) ")
+    end
