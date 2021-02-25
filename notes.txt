@@ -1,0 +1,9 @@
+user_input = .51
+output = 2 quarters + 1 penny
+
+whatever user_input = subtract largest values and whatever is left add smaller coin values
+.30 = 
+
+[quarters, dimes, nickels, pennies]
+
+
