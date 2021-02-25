@@ -17,3 +17,14 @@ value_hash.each
        if (#{key}_count > 0)
       result.concat("#{{key}_count} #{key}(s) ")
     end
+
+
+#{@change_purse.keys[@counter]}
+
+@change_purse.keys = ['quarter', 'dime', 'nickel' , 'penny']
+@counter starts at 0 in the initialize
+  and gets a +1 
+
+using @counter to point to an index of the array that is returned by @change_purse.keys
+
+new_array[0]

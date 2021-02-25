@@ -22,4 +22,18 @@ describe('Coins#coin_counter') do
       expect(change_purse.coin_counter('.41')).to(eq('1 quarter(s) 1 dime(s) 1 nickel(s) 1 penny(s) '))
     end
 
+    it('providing $.73 will result in one quarter and one dime one nickel one penny') do
+      change_purse = Coins.new()
+      expect(change_purse.coin_counter('.73')).to(eq('2 quarter(s) 2 dime(s) 3 penny(s) '))
+    end
+
+    it('providing 267 will result in one quarter and one dime one nickel one penny') do
+      change_purse = Coins.new()
+      expect(change_purse.coin_counter('267')).to(eq('10 quarter(s) 1 dime(s) 1 nickel(s) 2 penny(s) '))
+    end
+
+    it('providing -25 will result in one quarter') do
+      change_purse = Coins.new()
+      expect(change_purse.coin_counter('-25')).to(eq('1 quarter(s) '))
+    end
 end

@@ -8,11 +8,11 @@ class Coins
 
   def coin_counter(change_purse)
     result = ''
-    if (change_purse.match?(/./))
+    if (change_purse.match?(/\./))
       purse = change_purse.to_f * 100
-      purse = purse.to_i
+      purse = purse.to_i.abs
     else
-      purse = change_purse.to_i
+      purse = change_purse.to_i.abs
     end
 
     @denominations.each() do |key, value|
