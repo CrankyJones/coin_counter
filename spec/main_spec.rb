@@ -36,4 +36,9 @@ describe('Coins#coin_counter') do
       change_purse = Coins.new()
       expect(change_purse.coin_counter('-25')).to(eq('1 quarter(s) '))
     end
+
+    it('providing 1.7657 will result in one quarter') do
+      change_purse = Coins.new()
+      expect(change_purse.coin_counter('1.7657')).to(eq('7 quarter(s) 1 penny(s) '))
+    end
 end

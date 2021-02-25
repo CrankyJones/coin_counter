@@ -28,3 +28,6 @@ value_hash.each
 using @counter to point to an index of the array that is returned by @change_purse.keys
 
 new_array[0]
+
+
+1.7657
